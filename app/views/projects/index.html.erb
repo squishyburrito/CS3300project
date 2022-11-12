@@ -37,6 +37,18 @@
     border: .5px solid black;
     }
 
+    .button {
+      background-color: royalblue; 
+      border: none;
+      color: white;
+      padding: 5px 12px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      border-radius: 12px;
+    }
+
   </style>
 
 </head>
@@ -107,7 +119,24 @@ I love collecting, cleaning and analyzing data into comprehensive information.  
 </div>
 </div>
 
- 
+<p style="color: green"><%= notice %></p>
+
+<h1>Projects</h1>
+
+<div id="projects">
+  <% @projects.each do |project| %>
+    <%= render project %>
+    <p>
+    <form>
+      <div class="button">
+        <a href="@project %" class="button">Show the project >></a>
+      </div>
+    <form>
+    </p>
+  <% end %>
+</div>
+
+
 
 
 </body>
