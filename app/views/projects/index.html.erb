@@ -19,7 +19,7 @@
   border: .5px solid black;
   }
 
-  .button {
+  .button1 {
     background-color: royalblue; 
     border: none;
     color: white;
@@ -40,7 +40,9 @@
     border-radius: 5px;
   }
 
-
+  a:link {
+    text-decoration: none;
+  }
   </style>
 
 </head>
@@ -76,14 +78,14 @@
 
   <div class = "container" id = "border">
     <h1>Cynthia Valentine</h1>
-    <p> I am a junior in the Data Analytics and Systems Engineering department at University of Colorado, Colorado Springs.  
-    <br>I love collecting, cleaning and analyzing data into comprehensive information.</p>
+    <p> I am a junior in the <a href="https://dase.uccs.edu/" target="_blank">Data Analytics and Systems Engineering</a> department at University of Colorado, Colorado Springs.  
+    <br>I love collecting, cleaning and analyzing data into comprehensive information.<br>
 
-    <!-- link to open a new tab with more info -->
-    <a href="https://dase.uccs.edu/" target="_blank">Bachelor of Science in Data Analytics and Systems Engineering</a>   
+       
+    </p>
   </div>
   <br>
-  <br>
+
 
   <div class = container>
     <div id = "skills" > 
@@ -117,24 +119,25 @@
       </ul>
     </div>
   </div>
-
   <br>
 
   <div class = "container">
-    <div id="projects">    
-        <% @projects.each do |project| %>
-          <div class = "projectborder">
-          <%= render project %>
-          <p>
-          <form>
-            <div class="button">
-              <a href="@project %" class="button">Show this project >></a>
-            </div>
-          </form>
-          </p>
+    <div id="projects">   
+        
+          <% @projects.each do |project| %>
+            <div class = "projectborder">
+              <a style="font-weight: bold;"><%= project.title %></a> <br><br>
+              <a><%= project.description %></a><br><br>
+              <form>
+              <div>
+              <button  type = "button" class = "btn btn-primary"> <%= link_to "Show this project", project %></button>
+      
+              </div>
+            </form>
+  
         </div>
-        <% end %>
-  </div>  
+          <% end %>
+    </div>
   </div>
 
 
