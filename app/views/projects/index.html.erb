@@ -8,7 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-      
+  
   ul.b {
     list-style-type: circle;
   }
@@ -19,18 +19,6 @@
   border: .5px solid black;
   }
 
-  .button1 {
-    background-color: royalblue; 
-    border: none;
-    color: white;
-    padding: 5px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    border-radius: 12px;
-  }
-
   .projectborder {
     position: relative;
     text-align: left;
@@ -39,16 +27,19 @@
     padding: 12px 32px;
     border-radius: 5px;
   }
-
+  
   a:link {
     text-decoration: none;
+    color: white;
   }
   </style>
 
 </head>
 
 <body>
-  
+
+
+<!-- Black Nav Bar at top of page with a tab for Home and Account. Account has a dropdown menu.  -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class = "container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,6 +67,8 @@
     </nav>
 <br>
 
+
+<!-- Header info Student Name and Student info -->
   <div class = "container" id = "border">
     <h1>Cynthia Valentine</h1>
     <p> I am a junior in the <a href="https://dase.uccs.edu/" target="_blank">Data Analytics and Systems Engineering</a> department at University of Colorado, Colorado Springs.  
@@ -86,7 +79,7 @@
   </div>
   <br>
 
-
+<!-- Programming Language Skills section -->
   <div class = container>
     <div id = "skills" > 
       <p style="text-indent: 15px"> Programming Languages</p>
@@ -98,6 +91,7 @@
     </div>
   </div>
 
+  <!-- Techinical Skills section -->
   <div class = "container">
     <div id = "skills" > 
       <p style="text-indent: 15px"> Technical Skills</p>
@@ -121,9 +115,10 @@
   </div>
   <br>
 
+  <!-- Projects section  with a border around each project showing project name, description a link
+  that works to the projects show page-->
   <div class = "container">
-    <div id="projects">   
-        
+    <div id="projects">           
           <% @projects.each do |project| %>
             <div class = "projectborder">
               <a style="font-weight: bold;"><%= project.title %></a> <br><br>
@@ -131,16 +126,12 @@
               <form>
               <div>
               <button  type = "button" class = "btn btn-primary"> <%= link_to "Show this project", project %></button>
-      
               </div>
-            </form>
-  
-        </div>
+              </form>  
+            </div>
           <% end %>
     </div>
   </div>
-
-
 
 </body>
 </html>
