@@ -14,8 +14,7 @@
     }
 
     h1 {
-      color: mediumvioletred;
-      
+      color: mediumvioletred;    
     }
 
     h3 {
@@ -26,37 +25,69 @@
       color: steelblue;     
     }
 
-    button {
-      border-radius: 8px;
-      border: 4px border steelblue;
-      color:steelblue;
+    .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .index-link {
+      color: steelblue;
+    }
+
+    #projectborder {
+      position: relative;
+      border: 5px black;
+      float: left;
+      padding: 12px 32px;
+      border-radius: 5px;
     }
 
   </style>
 </head>
 
 <body>
-  <div class = "container">
-  <h1 style="font-weight: bold;">Edit a Project</h1>
 
-  <%= render "form", project: @project %>
+  <div class="container text-left">
+    <div class="row">
+      <div class="col-2">
+        column
+      </div>
+      <div class="col-8" id = "projectborder" >
+          <h1 style="font-weight: bold;">Edit Project</h1>
 
-  <br>
+          <%= render "form", project: @project %>
 
-  <br>
+          <div >
+            <%= link_to "Show this project", @project, class: "index-link" %> |
+            <%= link_to "Back to projects", projects_path, class: "index-link"%>
+          </div>
+      </div>
 
-  
+      
+    </div>
+  </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
   <h3> Title/Description </h3>
 
   <div>
-  <button type="button">Submit</button>
+    <button type="button">Submit</button>
   </div>
 
-    <div >
-      <%= link_to "Show this project", @project %> |
-      <%= link_to "Back to projects", projects_path %>
-    </div>
-    <br>
-    <h4> link </h4>
+
   </div>
 </body>
+</html>
