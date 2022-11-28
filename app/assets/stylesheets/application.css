@@ -13,3 +13,61 @@
  *= require_tree .
  *= require_self
  */
+h1 {
+    color: darkslategrey;
+    font-weight: bold; 
+}
+
+body {
+    background-color: lightgrey;
+}
+
+
+h4 {
+    color: steelblue;     
+}
+
+form {
+    color:slategrey ; 
+    font-weight: bold; 
+    display: block; 
+    width: 1000px; 
+    float: left;
+    font-size: 16px;
+} 
+  
+input[type=submit] {
+    background-color: silver;
+    border: 3px solid black;
+    color: darkslategrey;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+    }
+
+button {
+    background-color: silver;
+    border: 3px solid black;
+    color: darkslategrey;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+    }    
+
+#projectborder {
+position: relative;
+border: 3px solid black;
+float: left;
+padding: 12px 32px;
+}
+
+.index-link {
+    color: steelblue;
+    font-weight: bold;
+}
