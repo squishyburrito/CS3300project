@@ -12,24 +12,24 @@
 </head>
 
 <body>
-<div class="container text-left">
-  <div class="row">
-    <div class="col-1">  
-    </div>
-
-    <div class="col-8" id = "projectborder" >
- 
-      <h1>Add a New project</h1>
-
-
-      <%= render "form", project: @project %>
-
-      <br>
-
-        <div>
-          <%= link_to "Back to projects", projects_path %>
-        </div>
+  <div class="container text-left">
+    <div class="row">
+      <div class="col-1">  
       </div>
-  </div>   
-</div>      
+
+      <div class="col-8" id = "projectborder" >
+  
+        <h1>Add a New project</h1>
+
+
+        <%= render "form", project: @project %>
+
+        <br>
+
+          <div>
+            <%= link_to "Back to projects", projects_path %>
+          </div>
+        </div>
+    </div>   
+  </div>      
 </body>

@@ -22,11 +22,22 @@ body {
     background-color: lightgrey;
 }
 
+h2 {
+    color: slategray;
+}
 
 h4 {
     color: steelblue;     
 }
 
+a{
+    color: steelblue;
+}
+  
+a:link {
+    text-decoration: none;
+    color: white;
+  }
 form {
     color:slategrey ; 
     font-weight: bold; 
@@ -35,6 +46,30 @@ form {
     float: left;
     font-size: 16px;
 } 
+
+project {
+    color:slategrey ; 
+    font-weight: bold; 
+    display: block; 
+    width: 1000px; 
+    float: left;
+    font-size: 16px;
+}
+
+#skills {
+    position: relative;
+    text-align: left;
+    border: .5px solid black;
+    }
+
+.projectborder {
+    position: relative;
+    text-align: left;
+    border: 1px solid blue;
+    float: left;
+    padding: 12px 32px;
+    border-radius: 5px;
+  }
   
 input[type=submit] {
     background-color: silver;
